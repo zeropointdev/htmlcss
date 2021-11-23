@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        color: #343434;
+        font-size: 24;
+        height: 100vh;
+        text-align: center;
+        font-weight: bold;
+
+        display: grid;
+        grid-template-columns: 80px 400px 1fr 250px;
+        grid-template-rows: 80px 1fr;
+      }
+      nav,
+      section,
+      main,
+      aside {
+        padding: 24px;
+      }
+      nav {
+        background-color: #7a7a7a;
+        grid-row: 1 /-1; /*from 1st row to the end*/
+      }
+      menu {
+        background-color: violet;
+        color: #fff;
+        grid-column: 2/-1;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 40px;
+      }
+
+      button {
+        display: inline-block;
+
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #5f3dc4;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        padding: 8px 12px;
+      }
+      button:last-child {
+        background-color: #d6336c;
+        margin-left: auto;
+      }
+      section {
+        background-color: aqua;
+        padding: 40px;
+
+        overflow: scroll;
+
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+      section::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      section {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+
+      .email {
+        background-color: #dee2e6;
+        height: 96px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      main {
+        background-color: orange;
+      }
+      aside {
+        background-color: rgb(99, 61, 99);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>Nav</nav>
+    <menu>
+      <button>New</button>
+      <button>Reply</button>
+      <button>Forward</button>
+      <button>Make unread</button>
+      <button>Trash</button>
+    </menu>
+    <section>
+      <div class="email">Email 1</div>
+      <div class="email">Email 2</div>
+      <div class="email">Email 3</div>
+      <div class="email">Email 4</div>
+      <div class="email">Email 6</div>
+      <div class="email">Email 7</div>
+      <div class="email">Email 8</div>
+      <div class="email">Email 9</div>
+      <div class="email">Email 10</div>
+      <div class="email">Email 11</div>
+    </section>
+    <main>Email</main>
+    <aside>Information</aside>
+  </body>
+</html>
